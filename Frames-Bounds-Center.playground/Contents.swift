@@ -78,8 +78,15 @@ for i in 0..<7 {
 //Challenge 5: Image Pattern
 let superView5 = UIView(frame: superFrame)
 let patternImage = UIImage(named: "pattern.png")
-
 superView5.backgroundColor = UIColor(patternImage: patternImage!)
 
-
+for i in 0..<2 {
+    let subFrame5 = CGRect(x: CGFloat((superView5.frame.width/2)*CGFloat(i)), y:0, width: superView5.frame.width/2, height: superView5.frame.width/2)
+    let subView5 = UIView(frame: subFrame5)
+    subView5.backgroundColor = .black
+    let subSubView = UIView(frame: subView5.bounds.insetBy(dx: 30, dy: 30))
+    subSubView.backgroundColor = .red
+    subView5.addSubview(subSubView)
+    superView5.addSubview(subView5)
+}
 
