@@ -2,12 +2,16 @@
 
 import UIKit
 
+//Challenge 1: Create Margins with Bounds
 let superFrame = CGRect(x: 0, y: 0, width: 750, height: 1334)
 let superView = UIView(frame: superFrame)
 superView.backgroundColor = .white
 let redView = UIView(frame: superView.bounds.insetBy(dx: 20, dy: 20))
 redView.backgroundColor = .red
 superView.addSubview(redView)
+
+
+//Challenge 2: Checkered Board
 let superView2 = UIView(frame: superFrame)
 superView2.backgroundColor = .white
 
@@ -34,3 +38,17 @@ for j in 0..<8 {
     }
     superView2.addSubview(rowView)
 }
+
+//Challenge 3: Rainbow Rows
+let superView3 = UIView(frame: superFrame)
+superView3.backgroundColor = .white
+
+for j in 0..<12 {
+    let rainbowRowFrame = CGRect(x: 0, y:CGFloat((superFrame.height/12)*CGFloat(j)), width: superFrame.width, height: superFrame.height/12)
+    let rainbowRowView = UIView(frame: rainbowRowFrame)
+    rainbowRowView.backgroundColor = .red
+    superView.addSubview(rainbowRowView)
+}
+
+
+
