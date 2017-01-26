@@ -75,4 +75,11 @@ for i in 0..<7 {
     superView4.addSubview(satView)
 }
 
+//Challenge 5: Image Pattern
+let superView5 = UIView(frame: superFrame)
+let patternImage = UIImage(named: "pattern.png")
+
+superView5.backgroundColor = UIColor(patternImage: patternImage!)
+
+
 
