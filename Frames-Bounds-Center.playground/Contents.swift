@@ -65,4 +65,14 @@ for j in 0..<12 {
 }
 
 
+//Challenge 4: Saturation, Bounds
+let superView4 = UIView(frame: superFrame)
+superView4.backgroundColor = .white
+
+for i in 0..<7 {
+    let satView = UIView(frame: superView.bounds.insetBy(dx: CGFloat(30*CGFloat(i)), dy: CGFloat(30*CGFloat(i))))
+    satView.backgroundColor = UIColor(hue: 1.0, saturation: CGFloat(1/CGFloat(i)), brightness: 1.0, alpha: 1.0)
+    superView4.addSubview(satView)
+}
+
 
