@@ -17,10 +17,18 @@ for j in 0..<8 {
     for i in 0..<8 {
         let checkFrame = CGRect(x:CGFloat((superFrame.width/8)*CGFloat(i)), y:0, width: superFrame.width/8, height: superFrame.width/8)
         let checkView = UIView(frame: checkFrame)
-        if (i%2) == 0 {
-            checkView.backgroundColor = .black
+        if (j%2) == 0{
+            if (i%2) == 0 {
+                checkView.backgroundColor = .black
+            } else {
+                checkView.backgroundColor = .white
+            }
         } else {
-            checkView.backgroundColor = .white
+            if (i%2) == 0 {
+                checkView.backgroundColor = .white
+            } else {
+                checkView.backgroundColor = .black
+            }
         }
         rowView.addSubview(checkView)
     }
