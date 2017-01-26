@@ -79,14 +79,19 @@ for i in 0..<7 {
 let superView5 = UIView(frame: superFrame)
 let patternImage = UIImage(named: "pattern.png")
 superView5.backgroundColor = UIColor(patternImage: patternImage!)
-
-for i in 0..<2 {
-    let subFrame5 = CGRect(x: CGFloat((superView5.frame.width/2)*CGFloat(i)), y:0, width: superView5.frame.width/2, height: superView5.frame.width/2)
-    let subView5 = UIView(frame: subFrame5)
-    subView5.backgroundColor = .black
-    let subSubView = UIView(frame: subView5.bounds.insetBy(dx: 30, dy: 30))
-    subSubView.backgroundColor = .red
-    subView5.addSubview(subSubView)
-    superView5.addSubview(subView5)
+let subView5 = UIView(frame: superView5.bounds.insetBy(dx: 15, dy: 15))
+for j in 0..<3 {
+    let rowFrame5 = CGRect(x: 0, y: CGFloat((subView5.frame.width/2)*CGFloat(j)), width: subView5.frame.width, height: subView5.frame.width/2)
+    let rowView5 = UIView(frame: rowFrame5)
+    for i in 0..<2 {
+        let subSubFrame5 = CGRect(x: CGFloat((subView5.frame.width/2)*CGFloat(i)), y:0, width: subView5.frame.width/2, height: subView5.frame.width/2)
+        let subSubView5 = UIView(frame: subSubFrame5)
+        rowView5.addSubview(subSubView5)
+        let subSubSubView5 = UIView(frame: subSubView5.bounds.insetBy(dx: 15, dy: 15))
+        subSubSubView5.backgroundColor = .black
+        subSubView5.addSubview(subSubSubView5)
+    }
+    subView5.addSubview(rowView5)
 }
+superView5.addSubview(subView5)
 
