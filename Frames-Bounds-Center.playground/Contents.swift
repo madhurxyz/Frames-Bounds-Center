@@ -43,10 +43,24 @@ for j in 0..<8 {
 let superView3 = UIView(frame: superFrame)
 superView3.backgroundColor = .white
 
+let red1 = UIColor(red: 237.0/255.0, green: 71.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+let orange = UIColor(red: 240.0/255.0, green: 127.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+let yellow = UIColor(red: 243.0/255.0, green: 235.0/255.0, blue: 53.0/255.0, alpha: 1.0)
+let lightGreen = UIColor(red: 147.0/255.0, green: 200.0/255.0, blue: 64.0/255.0, alpha: 1.0)
+let green = UIColor(red: 108.0/255.0, green: 190.0/255.0, blue: 69.0/255.0, alpha: 1.0)
+let aqua = UIColor(red: 111.0/255.0, green: 192.0/255.0, blue: 107.0/255.0, alpha: 1.0)
+let blue = UIColor(red: 66.0/255.0, green: 120.0/255.0, blue: 189.0/255.0, alpha: 1.0)
+let darkBlue = UIColor(red: 57.0/255.0, green: 84.0/255.0, blue: 164.0/255.0, alpha: 1.0)
+let purple = UIColor(red: 106.0/255.0, green: 82.0/255.0, blue: 162.0/255.0, alpha: 1.0)
+let pink = UIColor(red: 205.0/255.0, green: 75.0/255.0, blue: 155.0/255.0, alpha: 1.0)
+let magenta = UIColor(red: 237.0/255.0, green: 74.0/255.0, blue: 88.0/255.0, alpha: 1.0)
+let red2 = UIColor(red: 237.0/255.0, green: 71.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+let colorArray: [UIColor] = [red1,orange,yellow,lightGreen,green,aqua,blue,darkBlue,purple,pink,magenta,red2]
+
 for j in 0..<12 {
     let rainbowRowFrame = CGRect(x: 0, y:CGFloat((superFrame.height/12)*CGFloat(j)), width: superFrame.width, height: superFrame.height/12)
     let rainbowRowView = UIView(frame: rainbowRowFrame)
-    rainbowRowView.backgroundColor = .red
+    rainbowRowView.backgroundColor = colorArray[j]
     superView.addSubview(rainbowRowView)
 }
 
